@@ -19,3 +19,8 @@ let cad =`
 `
 
 document.getElementById("head").innerHTML=cad;
+
+
+document.getElementsByClassName("foot").color = "red";
+
+
