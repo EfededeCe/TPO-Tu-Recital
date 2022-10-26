@@ -107,6 +107,11 @@ div#demo {
     display: grid;
 }
 
+section h3{
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
 div a#a-la-gale{
     padding: 0px;
 }
