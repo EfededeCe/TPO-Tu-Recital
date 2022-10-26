@@ -16,7 +16,13 @@ body {
 
 article img {
     max-width: 100%;
+    border-radius: 10px;
+    height: 100%;
 }
+.main .contiene-img {
+    display: none;
+}
+
 
 .sidebar{
     grid-area: side;
@@ -29,6 +35,32 @@ article img {
 }
 
 
+@media screen and (min-width: 552px) {
+
+    .main div {
+        margin: 20px;
+        display: grid;
+        grid-template-areas: "f1 f2 f3";
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+    }
+
+    div article {
+        border-radius: 10px;
+        box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+        max-width: 90%;
+    }
+
+    .card:hover {
+        cursor: pointer;
+        box-shadow: none;
+        filter: grayscale(60%);
+        transition: filter .4s;
+        column-span: all;
+    }
+}
+
+
 @media screen and (min-width: 1080px) {
     .sidebar{
         grid-area: side;
@@ -36,50 +68,50 @@ article img {
         display: initial;
     }
 
-    .main div {
-        margin: 20px;
-        display: grid;
-        grid-template-areas: "f1 f2 f3"
-        "f4 f5 f6"
-        "f7 f8 f9";
-        grid-column-gap: 20px;
-        grid-row-gap: 20px;
+    .main .contiene-img {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        top: -2%;
+        left: -1.6%;
+        transform: translateX(-150%);
+        background-color: rgba(0, 0, 0, .7);
+        transition: transform .2s ease-in;
+    }
+
+    .contiene-img.centrar {
+        transform: translateX(0%);
+        /* justify-content: center; */
+        
     }
     
-    div article {
-        border-radius: 10px;
-        box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.5);
+    .show {
+        height: 70%;
+        object-fit: cover;
     }
 
-    div article img {
-        border-radius: 10px;
+    .texto{
+        position: fixed;
+        display: block;
+        color: #fa414a;
+        bottom: 70px;
     }
 
-    .main div:nth-child(1) {
-        grid-area: f1;
+    .fa-solid.fa-xmark {
+        position: absolute;
+        padding: 1px 10px ;
+        color:#f6f1d4;
+        border:2px #fa414a double;
+        border-radius: 5px;
+        box-shadow: 10px 10px 100px #fa414a;
+        top: 20px;
+        right: 50px;
+        font-size: 50px;
+        cursor: pointer;
     }
-    .main div:nth-child(2) {
-        grid-area: f2;
-    }
-    .main div:nth-child(3) {
-        grid-area: f3;
-    }
-    .main div:nth-child(4) {
-        grid-area: f4;
-    }
-    .main div:nth-child(5) {
-        grid-area: f5;
-    }
-    .main div:nth-child(6) {
-        grid-area: f6;
-    }
-    .main div:nth-child(7) {
-        grid-area: f7;
-    }
-    .main div:nth-child(8) {
-        grid-area: f8;
-    }
-    .main div:nth-child(9) {
-        grid-area: f9;
-    }
+    
+
 }
