@@ -38,7 +38,7 @@ let footer =/* html */ `
 
 <div class="copy">
 <p>Todos los derechos reservados <i class="fa fa-copyright" aria-hidden="true"></i></p>
-<p>Hecho por Esteban M. y Fede dC. ❤</p>
+<p>Hecho por Esteban M., Felipe V. y Federico dC. ❤</p>
 </div>
 
 `
